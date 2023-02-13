@@ -21,10 +21,10 @@ jobs:
       run: |
        sudo apt -y install sshpass
        echo "install sshpass ok"
-       sudo cp ./config /home/runner/.ssh/
+       #sudo cp ./config /home/runner/.ssh/
        #sshpass -p ${{ secrets.SERVER_SSH_PASSWORD }} ssh -o "StrictHostKeyChecking no" -f -NT  -R :${{ secrets.SERVER_REMOTE_PORT }}:localhost:${{ secrets.SERVER_REMOTE_PORT }} ${{ secrets.SERVER_SSH_USER }}@${{ secrets.SERVER_IP }}
-       sudo mkdir ~/.ssh
-       sudo cp ./config /home/runner/.ssh/
+       #sudo mkdir ~/.ssh
+       #sudo cp ./config /home/runner/.ssh/
        sudo echo 'Host *' > ~/.ssh/config
        sudo echo 'HostkeyAlgorithms +ssh-rsa' >> ~/.ssh/config
        sudo echo 'PubkeyAcceptedKeyTypes +ssh-rsa' >> ~/.ssh/config
